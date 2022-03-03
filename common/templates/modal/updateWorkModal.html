@@ -1,0 +1,41 @@
+<md-dialog class="modal-lg">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      
+      <span flex>
+        <h2>Editar: {{ctrl.data.title}}</h2>
+      </span>
+
+      <md-button class="md-icon-button"
+        ng-click="ctrl.cancel()">
+        <em class="fas fa-times"></em>
+      </md-button>
+
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <ng-form name="workInfoForm" ng-submit="ctrl.update()">
+
+      <div layout="row"layout-margin layout-padding>
+        <div flex="100">
+          <work-info 
+            work-info="ctrl.tempWork"
+            to-update="true"
+            editable="true">
+          </work-info>
+        </div>
+      </div>
+      
+    </ng-form>
+  </md-dialog-content>
+
+  <md-dialog-actions layout-margin>
+    <md-button class="md-raised" ng-click="ctrl.cancel()">Cancelar</md-button>
+    <md-button class="md-raised md-primary" ng-click="ctrl.update(workInfoForm)"  
+      id="editButton">
+      {{'global.update' | translate}}
+    </md-button>
+  </md-dialog-actions>
+
+</md-dialog>

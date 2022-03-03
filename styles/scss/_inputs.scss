@@ -1,0 +1,181 @@
+.md-errors-spacer {
+  display: none;
+}
+
+/*****INPUT CONTAINER*****/
+
+md-input-container {
+  margin-bottom: 0px;
+
+  &.disabled {
+    label {
+      color: $utp-muted;
+
+      &::after {
+        color: $utp-muted;
+      }
+    }
+  }
+
+  label {
+    color: $utp-main-color;
+
+    &::after {
+      color: $utp-red;
+    }
+  }
+
+  &:not(.md-input-invalid).md-input-has-value label {
+    color: $utp-main-color;
+  }
+
+  &.aa-invalid-attempt label {
+    color: $utp-red;
+  }
+
+  &.mail-container {
+    min-width: 50%;
+  }
+}
+
+/********* INPUT *********/
+
+input {
+  border-color: $utp-input-border;
+
+  &:focus {
+    border-color: $utp-main-color;
+    border-width: 0 0 1px 0 !important;
+  }
+
+  &.aa-invalid-attempt:not(.ng-valid):not([disabled]) {
+    border-color: $utp-red;
+  }
+}
+
+/********* RADIO *********/
+
+md-radio-button {
+
+  .md-on {
+    background-color: $utp-main-color;
+  }
+
+  &.md-checked {
+
+    .md-off {
+      border-color: $utp-main-color;
+    }
+
+    .md-ink-ripple {
+      color: $utp-main-color-transparent;
+    }
+
+  }
+}
+
+md-radio-group.md-focused {
+  .md-checked {
+    .md-container:before {
+      background-color: $utp-main-color-transparent !important;
+    }
+  }
+}
+
+/********* SELECT *********/
+
+md-select {
+  margin: 0px !important;
+
+  .md-select-value {
+    color: $utp-main-color;
+    border-color: $utp-input-border;
+
+    span:not(.md-select-icon)::after {
+      color: $utp-red;
+    }
+  }
+
+  &:focus .md-select-value {
+    border-color: $utp-main-color !important;
+    border-width: 0 0 1px 0 !important;
+  }
+
+  &[disabled] .md-select-value {
+    color: $utp-muted !important;
+
+    span:not(.md-select-icon)::after {
+      color: $utp-muted;
+    }
+  }
+}
+
+md-select-menu {
+  background-color: $utp-white;
+
+  md-content {
+    md-option {
+      &[selected] {
+        color: $utp-main-color;
+        background-color: $utp-item-hover;
+      }
+
+      &:hover {
+        background-color: $utp-item-hover;
+      }
+    }
+  }
+}
+
+/********* DROPDOWN *********/
+
+.sidenav-adviser {
+  margin-top: 70px;
+}
+
+.sidenav-document {
+  margin-top: 75px;
+}
+
+.sidenav-item {
+  border-style: solid;
+  border-color: $utp-main-color;
+  border-width: 0px 1px 1px 0px;
+
+  &:hover {
+    background-color: $utp-item-hover;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $utp-main-color;
+    color: $utp-white;
+  }
+}
+
+/**********TEXT AREA**********/
+
+textarea {
+  border-color: $utp-input-border;
+
+  &:focus {
+    border-color: $utp-main-color !important;
+    border-width: 0 0 1px 0 !important;
+  }
+}
+
+/********* SWITCH ***********/
+
+md-checkbox {
+  .md-icon {
+    border-color: rgb(15, 65, 152);
+  }
+  &.md-checked{
+    .md-icon{
+      background-color: rgb(15, 65, 152);
+    }
+    .md-icon:after{
+      border-color: white;
+    }
+  }
+}

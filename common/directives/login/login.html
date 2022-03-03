@@ -1,0 +1,61 @@
+<ng-form name="loginForm" ng-submit="validateUser()">
+
+  <div class="text-center mb-3">
+    <h2>{{'global.login'|translate}}</h2>
+  </div>
+
+  <div layout="row">
+    <div flex-offset="5" flex="90">
+      <div layout="row" layout-margin layout-wrap layout-align="start center">
+
+        <!-- IDENTIFICACION -->
+        <div flex="100">
+          <md-input-container class="md-block">
+          <label>{{'global.id' | translate}}</label>
+            <input class="text-uppercase"
+              name="identification"
+              aa-label="{{'global.id' | translate}}"
+              aa-label-strategy="emptyStrategy"
+              aa-field-group="userToSearch.docToSearch"
+              utp-pattern="{{userRules.identification.pattern}}"
+              required="true"
+              autocomplete="off">
+          </md-input-container>
+        </div>
+    
+        <!-- CONTRASEÑA -->
+        <div flex="80" class="pr-0">
+          <md-input-container class="md-block">
+            <label>{{'global.password' | translate}}</label>
+            <input name="password"
+              aa-label="{{'global.password' | translate}}"
+              aa-label-strategy="emptyStrategy"
+              aa-field-group="userToSearch.passToSearch"
+              type="{{passwordConfig().type}}"
+              required="true">
+          </md-input-container>
+
+        </div>
+        <div class="ml-0">
+          <em class="viewPassword no-focus-shaddow"
+            ng-class="passwordConfig().icon"
+            ng-click="showPassword()">
+          </em>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div layout="column" layout-margin layout-align="center center">
+    <!-- BOTÓN ACEPTAR -->
+    <div flex>
+      <md-button class="md-raised md-primary" 
+      id="loginButton"
+      type="submit"
+      aa-submit-form="findUser(userToSearch)">
+      Iniciar sesión
+    </md-button>
+    </div>
+  </div>
+  
+</ng-form>

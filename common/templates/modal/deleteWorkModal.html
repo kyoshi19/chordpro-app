@@ -1,0 +1,34 @@
+<md-dialog class="modal-dialog modal-sm">
+  <md-toolbar>
+    <div class="md-toolbar-tools" layout="row">
+      <div flex="90">
+        <h2>Eliminar</h2>
+      </div>
+      <div flex="10">
+        <md-button class="md-icon-button" ng-click="ctrl.cancel()">
+          <em class="fas fa-times"></em>
+        </md-button>
+      </div>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+
+    <div layout="column" layout-padding>
+      <div flex>
+        <h4 class="my-0">Tema: {{ctrl.data.title}}</h4>
+      </div>
+      <div flex>
+        <span> ¿Seguro que quiere eliminar este trabajo?</span>
+      </div> 
+    </div>
+
+  </md-dialog-content>
+
+
+  <md-dialog-actions>
+    <md-button ng-click="ctrl.cancel()" class="md-raised">Cancelar</md-button>
+    <md-button ng-click="ctrl.delete()" class="md-raised md-primary">Eliminar</md-button>
+  </md-dialog-actions>
+
+</md-dialog>

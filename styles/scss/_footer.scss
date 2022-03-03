@@ -1,0 +1,30 @@
+footer{
+  background-color: $utp-footer-background;
+  height: 120px;
+  padding: 12px;
+}
+.footer-guia{
+  padding: 15px;
+  font-size: 14px;
+}
+
+.footer-info{
+  background-image: url("../../src/img/logo-enfocados.png");
+  background-repeat: no-repeat;
+  color: $utp-white;
+  font-size: 13px;
+  padding-left: 90px !important;
+  margin-top: 13px;
+  p{
+    margin-top: 0px;
+  }
+}
+
+.footer-interest{
+  text-align: right;
+  margin-top: 13px;
+  a{
+    color:$utp-white;
+    font-size: 13px;
+  }
+}

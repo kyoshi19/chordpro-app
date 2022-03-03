@@ -1,0 +1,24 @@
+<md-dialog class="modal-dialog modal-ms">
+
+    <div class="md-toolbar-tools">
+      <h2>{{ctrl.data.title}}</h2>
+      <md-button class="md-icon-button"
+        ng-click="ctrl.accept()">
+        <em class="fas fa-times"></em>
+      </md-button>
+    </div>
+
+  <md-dialog-content>
+    
+    <div layout layout-padding>
+      {{ctrl.data.content}}
+    </div>
+
+  </md-dialog-content>
+
+
+  <md-dialog-actions>
+      <md-button ng-click="ctrl.accept()" class="md-raised md-primary" >Aceptar</md-button>
+  </md-dialog-actions>
+
+</md-dialog>

@@ -1,0 +1,34 @@
+<div class="text-center">
+  <h2>{{'global.work.add' | translate}}</h2>
+</div>
+
+<ng-form name="workInfoForm">
+  
+  <div layout="row" layout-wrap md-whiteframe="1" class="mb-5">
+
+    <div flex="100">
+      <work-info
+      work-info="workToAdd"
+      editable="true">
+      </work-info>  
+    </div>
+    
+    <div flex="33" class="mb-2">
+        <md-button class="md-raised md-primary"
+          id="addWorkButton"
+          aa-submit-form="insertWork(workInfoForm)">
+          {{'global.work.add.button' | translate}}
+        </md-button>
+    </div> 
+
+  </div>
+  
+</ng-form>
+
+<jobs-list
+  works = "works"
+  user-type = "user.type"
+  search-works = "searchWorks()"
+  show-options = "false">
+</jobs-list>
+
