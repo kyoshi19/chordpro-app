@@ -28,7 +28,6 @@
     'angularModalService',
     'ngMaterial',
     'ngMessages',
-    'md.data.table',
     'ngAnimate',
     'ngSanitize'
 
