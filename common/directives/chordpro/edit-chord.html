@@ -45,7 +45,11 @@
 
     <!-- VISTA PREVIA -->
     <div flex=50>
-      --{{parsedChordpro}}--
+      <div ng-repeat="line in parsedChordpro track by $index">
+        <div ng-if="$index > 1">
+          {{line}}
+        </div>
+      </div>
       <md-input-container class="md-block">
         <label>{{'global.preview' | translate}}</label>
         <textarea ng-model="parsedChordpro" disabled=true></textarea>
