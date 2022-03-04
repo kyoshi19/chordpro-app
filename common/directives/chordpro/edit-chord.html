@@ -39,15 +39,16 @@
     <div flex=50>
       <md-input-container class="md-block">
         <label>{{'global.chordpro.code' | translate}}</label>
-        <textarea ng-model="song.chordpro"></textarea>
+        <textarea ng-model="song.chordpro" ng-change="getChordProParsedSong()"></textarea>
       </md-input-container>
     </div>
 
     <!-- VISTA PREVIA -->
     <div flex=50>
+      --{{parsedChordpro}}--
       <md-input-container class="md-block">
         <label>{{'global.preview' | translate}}</label>
-        <textarea ng-model="song.chordpro"></textarea>
+        <textarea ng-model="parsedChordpro" disabled=true></textarea>
       </md-input-container>
     </div>
   </div>

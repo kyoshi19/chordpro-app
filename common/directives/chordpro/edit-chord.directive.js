@@ -3,6 +3,7 @@
 
   //  edit chord directive
   function editChord($log) {
+
     var directive = {
       restrict: 'E',
       templateUrl: 'common/directives/chordpro/edit-chord.html',
@@ -19,9 +20,20 @@
 
       /* --> VALUES <-- */
 
+      scope.parsedChordpro = {};
 
       /* --> METHODS <-- */
 
+      scope.getChordProParsedSong = function() {
+
+        let chordProParser = new ChordProjectParser.ChordProParser();
+        let formatter = new ChordProjectParser.TextFormatter();
+
+        let chordSong = chordProParser.parse(scope.song.chordpro);
+
+        scope.parsedChordpro = formatter.format(chordSong);
+
+      }
 
       function setup() {
 
