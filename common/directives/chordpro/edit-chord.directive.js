@@ -31,6 +31,10 @@
 
         let chordSong = chordProParser.parse(scope.song.chordpro);
 
+        // var tag_id = document.getElementById('tagid');
+        // var newNode = document.createElement('p');
+        // newNode.appendChild(document.createTextNode('html string'));
+
         scope.parsedChordpro = formatter.format(chordSong);
 
       }
