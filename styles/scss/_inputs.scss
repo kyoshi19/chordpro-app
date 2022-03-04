@@ -9,28 +9,28 @@ md-input-container {
 
   &.disabled {
     label {
-      color: $utp-muted;
+      color: $muted;
 
       &::after {
-        color: $utp-muted;
+        color: $muted;
       }
     }
   }
 
   label {
-    color: $utp-main-color;
+    color: $main-color;
 
     &::after {
-      color: $utp-red;
+      color: $red;
     }
   }
 
   &:not(.md-input-invalid).md-input-has-value label {
-    color: $utp-main-color;
+    color: $main-color;
   }
 
   &.aa-invalid-attempt label {
-    color: $utp-red;
+    color: $red;
   }
 
   &.mail-container {
@@ -41,15 +41,15 @@ md-input-container {
 /********* INPUT *********/
 
 input {
-  border-color: $utp-input-border;
+  border-color: $input-border;
 
   &:focus {
-    border-color: $utp-main-color;
+    border-color: $main-color;
     border-width: 0 0 1px 0 !important;
   }
 
   &.aa-invalid-attempt:not(.ng-valid):not([disabled]) {
-    border-color: $utp-red;
+    border-color: $red;
   }
 }
 
@@ -58,17 +58,17 @@ input {
 md-radio-button {
 
   .md-on {
-    background-color: $utp-main-color;
+    background-color: $main-color;
   }
 
   &.md-checked {
 
     .md-off {
-      border-color: $utp-main-color;
+      border-color: $main-color;
     }
 
     .md-ink-ripple {
-      color: $utp-main-color-transparent;
+      color: $main-color-transparent;
     }
 
   }
@@ -77,7 +77,7 @@ md-radio-button {
 md-radio-group.md-focused {
   .md-checked {
     .md-container:before {
-      background-color: $utp-main-color-transparent !important;
+      background-color: $main-color-transparent !important;
     }
   }
 }
@@ -88,40 +88,40 @@ md-select {
   margin: 0px !important;
 
   .md-select-value {
-    color: $utp-main-color;
-    border-color: $utp-input-border;
+    color: $main-color;
+    border-color: $input-border;
 
     span:not(.md-select-icon)::after {
-      color: $utp-red;
+      color: $red;
     }
   }
 
   &:focus .md-select-value {
-    border-color: $utp-main-color !important;
+    border-color: $main-color !important;
     border-width: 0 0 1px 0 !important;
   }
 
   &[disabled] .md-select-value {
-    color: $utp-muted !important;
+    color: $muted !important;
 
     span:not(.md-select-icon)::after {
-      color: $utp-muted;
+      color: $muted;
     }
   }
 }
 
 md-select-menu {
-  background-color: $utp-white;
+  background-color: $white;
 
   md-content {
     md-option {
       &[selected] {
-        color: $utp-main-color;
-        background-color: $utp-item-hover;
+        color: $main-color;
+        background-color: $item-hover;
       }
 
       &:hover {
-        background-color: $utp-item-hover;
+        background-color: $item-hover;
       }
     }
   }
@@ -139,27 +139,27 @@ md-select-menu {
 
 .sidenav-item {
   border-style: solid;
-  border-color: $utp-main-color;
+  border-color: $main-color;
   border-width: 0px 1px 1px 0px;
 
   &:hover {
-    background-color: $utp-item-hover;
+    background-color: $item-hover;
     cursor: pointer;
   }
 
   &.active {
-    background-color: $utp-main-color;
-    color: $utp-white;
+    background-color: $main-color;
+    color: $white;
   }
 }
 
 /**********TEXT AREA**********/
 
 textarea {
-  border-color: $utp-input-border;
+  border-color: $input-border;
 
   &:focus {
-    border-color: $utp-main-color !important;
+    border-color: $main-color !important;
     border-width: 0 0 1px 0 !important;
   }
 }

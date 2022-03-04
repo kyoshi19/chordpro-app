@@ -6,7 +6,7 @@ h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6{
   font-family: "Titillium";
   font-weight: bold !important;
-  color: $utp-main-color;
+  color: $main-color;
 }
 
 button, select, html, textarea, input {
@@ -25,7 +25,7 @@ button, select, textarea {
   font-family: "Titillium";
   font-size: 14px;
   a {
-    color: $utp-black;
+    color: $black;
   }
 }
 
@@ -42,10 +42,10 @@ button, select, textarea {
 }
 
 .message-result{
-  color: $utp-skyblue;
+  color: $skyblue;
 }
 .mensaje-error{
-  color: $utp-red;
+  color: $red;
   font-size: 12px;
 }
 
@@ -70,7 +70,7 @@ button, select, textarea {
   
   &::before {
     font-size: large;
-    color:$utp-main-color;
+    color:$main-color;
   }
 }
 

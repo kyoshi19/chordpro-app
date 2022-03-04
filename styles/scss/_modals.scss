@@ -14,16 +14,16 @@
 }
 
 md-toolbar{
-  background-color: $utp-main-color !important;
+  background-color: $main-color !important;
   h2{
-    color:$utp-white
+    color:$white
   }
 }
 
 md-dialog{
   top:-7%;
   position: fixed;
-  background-color: $utp-white;
+  background-color: $white;
 
   &.md-content-overflow md-dialog-actions{
     border-top-style: none !important;

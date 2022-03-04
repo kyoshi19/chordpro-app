@@ -3,26 +3,26 @@
   margin-bottom: 10px;
 }
 .btn-outline-primary{
-  color: $utp-main-color;
-  border-color: $utp-main-color;
+  color: $main-color;
+  border-color: $main-color;
 }
 
 .btn-tab{
   border-radius: 0px;
   background-color: transparent;
   background-image: none;
-  color: $utp-main-color;
-  border-color: $utp-main-color;
+  color: $main-color;
+  border-color: $main-color;
 }
 
 .md-button.md-raised.md-primary{
-  background-color:$utp-main-color !important;
-  color:$utp-white;
+  background-color:$main-color !important;
+  color:$white;
 }
 
 md-dialog{
   .md-toolbar-tools .md-button{
-    color: $utp-white;
+    color: $white;
     height: 27px !important;
     font-size: 20px;
     border-left: solid;

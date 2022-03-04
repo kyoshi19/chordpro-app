@@ -27,6 +27,9 @@
   <!-- FONT AWESOMES -->
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
 
+  <!-- ICONO DE PESTAÑA -->
+  <link rel="icon" type="image/png" href="src/img/icon.png" />  
+
 </head>
 <body ng-controller="masterController as mctrl" ng-class="mctrl.bodyClases(document)">
 
@@ -35,12 +38,12 @@
 
   <!-- CABECERA DE TODAS LAS PÁGINAS -->
   <ng-include  src="'common/templates/header.html'"></ng-include>
-  
+
 
   <!-- CARGADOR CON LOGO UTP -->
   <div id="loader-content" ng-cloak ng-if="mctrl.storage.showLoader">
     <div class="logo-container">
-      <img class="utp-loader" src="src/img/logo-enfocados.png" alt="Imagen no disponible"></img>
+      <img class="utp-loader" src="src/img/loader.png" alt="Imagen no disponible"></img>
     </div>
   </div>
 
@@ -61,7 +64,7 @@
     <script src="common/controllers/master-controller.js"></script>
 
     <!-- DIRECTIVAS -->
-    <script src="common/directives/login/login.directive.js"></script>
+    <script src="common/directives/chordpro/edit-chord.directive.js"></script>
 
     <!-- VALUES -->
     <script src="common/values/values.js"></script>

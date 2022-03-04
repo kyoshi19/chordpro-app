@@ -10,7 +10,13 @@ config.$inject= [
 var EStranslate = {
 
   // TITULOS PRINCIPALES
-  'global.main.title'               : 'Gestor de opciones de trabajo de graduación',
+  'global.main.title'               : 'Enfocados chordpro application',
+  'global.song.edit'                : 'Editar canción',
+  'global.name'                     : 'Nombre',
+  'global.artist'                   : 'Artista',
+  'global.chordpro.code'            : 'Código chordpro',
+  'global.preview'                  : 'Vista previa',
+  
   'utp.name'                        : 'Universidad Tecnológica de Panamá',
   'header.faculty'                  : 'Facultad de Ingeniería de Sistemas Computacionales',
   'global.firstName'                : 'Nombre',
@@ -20,7 +26,6 @@ var EStranslate = {
   'global.id'                       : 'Cédula',
   'global.passport'                 : 'Pasaporte',
   'global.password'                 : 'Contraseña',
-  'global.login'                    : 'Iniciar Sesión',
   'global.close'                    : 'Cerrar',
   'global.logout'                   : 'Cerrar sesión',
   'global.cancel'                   : 'Cancelar',

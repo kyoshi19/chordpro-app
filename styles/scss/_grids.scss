@@ -1,14 +1,14 @@
-body{
-background-color: $utp-white;
+body {
+  background-color: $white;
 }
 
-.flex{
+.flex {
   padding-left: 10px;
   padding-right: 10px
 }
 
 @for $i from 1 to 101 {
-  .flex-#{$i}{
+  .flex-#{$i} {
     padding-left: 10px;
     padding-right: 10px
   }
@@ -17,22 +17,24 @@ background-color: $utp-white;
 $val: 0 !default;
 
 @for $i from 0 to 6 {
-  
 
-  @if $i!=0 {
 
-    @if $i< 3  {
-      $val: $i/4;
-    } 
+  @if $i !=0 {
+
+    @if $i< 3 {
+      $val: calc($i / 4);
+    }
+
     @if $i > 2 {
-      $val: 3/(6-$i);
+      $val: calc(3 / (6 - $i));
     }
 
   }
-  
-  .m-#{$i}{
+
+  .m-#{$i} {
     margin : #{$val}rem !important;
   }
+
   .mt-#{$i},
   .my-#{$i} {
     margin-top: #{$val}rem !important;
@@ -53,9 +55,10 @@ $val: 0 !default;
     margin-left: #{$val}rem !important;
   }
 
-  .p-#{$i}{
+  .p-#{$i} {
     padding : #{$val}rem !important;
   }
+
   .pt-#{$i},
   .py-#{$i} {
     padding-top: #{$val}rem !important;
@@ -75,39 +78,42 @@ $val: 0 !default;
   .px-#{$i} {
     padding-left: #{$val}rem !important;
   }
-  
+
 }
-.master-view{
+
+.master-view {
   min-height: 450px;
 }
 
-.md-nav-bar{
-  background-color: $utp-main-color !important;
+.md-nav-bar {
+  background-color: $main-color !important;
 
-  span{
-    color: $utp-white;
+  span {
+    color: $white;
   }
-  .md-active{
-    span{ 
-    font-weight: bold;
+
+  .md-active {
+    span {
+      font-weight: bold;
+    }
   }
-  }
-  md-nav-ink-bar{
-    background: $utp-white;
+
+  md-nav-ink-bar {
+    background: $white;
   }
 }
 
-td.work-item:hover{
-  background-color: $utp-item-hover;
+td.work-item:hover {
+  background-color: $item-hover;
   cursor: pointer;
 }
 
-.navbar-nav{
+.navbar-nav {
   min-width: 100.5%;
 }
 
-.container{
-  .navigation{
+.container {
+  .navigation {
     margin-left: 87px;
     margin-right: 87px;
     padding: 0px;
@@ -118,26 +124,27 @@ td.work-item:hover{
   float: none;
 }
 
-.form-inline-mixed{
+.form-inline-mixed {
   width: 100%;
   height: 80px;
 }
 
-.faculty-tabs{
-  background-color: $utp-prueba-color;
+.faculty-tabs {
+  background-color: $prueba-color;
   min-height: 10px;
   min-width: 10px;
 }
 
-.center-col{
+.center-col {
   float: none !important;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hand-hover:hover{
+.hand-hover:hover {
   cursor: pointer;
-  &.highlighted{
-    background-color: $utp-item-hover;
+
+  &.highlighted {
+    background-color: $item-hover;
   }
 }

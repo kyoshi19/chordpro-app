@@ -8,5 +8,5 @@ config.$inject = [
 ];
 
 function config($urlRouterProvider) {
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/index');
 }
