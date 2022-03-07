@@ -1,16 +1,17 @@
 @include font-face("GothicRegular", "../../fonts/GOTHIC",null,null,ttf);
 @include font-face("Monterey", "../../fonts/monterey/MontereyFLF",null,null,ttf);
 @include font-face("Titillium", "../../fonts/titillium-web/TitilliumWeb-Regular",null,null,ttf);
+@include font-face("consola", "../../fonts/inconsolata/Inconsolata-Regular",null,null,ttf);
 
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6{
-  font-family: "Titillium";
+  font-family: "consola";
   font-weight: bold !important;
   color: $main-color;
 }
 
 button, select, html, textarea, input {
-  font-family: "Titillium", "Helvetica Neue", sans-serif !important;
+  font-family: "consola", "Helvetica Neue", sans-serif !important;
 }
 
 button, select, textarea {
@@ -22,7 +23,7 @@ button, select, textarea {
   margin-left: 8px;
 }
 .site-slogan {
-  font-family: "Titillium";
+  font-family: "consola";
   font-size: 14px;
   a {
     color: $black;
@@ -30,7 +31,7 @@ button, select, textarea {
 }
 
 .site-name {
-  font-family: "Titillium";
+  font-family: "consola";
   font-weight: normal;
   font-size: 24px;
   margin: 0;
@@ -38,7 +39,7 @@ button, select, textarea {
 }
 
 .site-title{
-  font-family: "Titillium";
+  font-family: "consola";
 }
 
 .message-result{

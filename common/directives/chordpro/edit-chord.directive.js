@@ -1,4 +1,4 @@
-(function(win) {
+(function (win) {
   'use strict';
 
   //  edit chord directive
@@ -24,19 +24,31 @@
 
       /* --> METHODS <-- */
 
-      scope.getChordProParsedSong = function() {
+      scope.getChordProParsedSong = function () {
 
         let chordProParser = new ChordProjectParser.ChordProParser();
-        let formatter = new ChordProjectParser.TextFormatter();
+        let formatterHtml = new ChordProjectParser.HtmlFormatter();
 
         let chordSong = chordProParser.parse(scope.song.chordpro);
 
-        // var tag_id = document.getElementById('tagid');
-        // var newNode = document.createElement('p');
-        // newNode.appendChild(document.createTextNode('html string'));
+        scope.parsedChordproHtml = formatterHtml.format(chordSong);
+        scope.chordproSongHtml = '';
 
-        scope.parsedChordpro = formatter.format(chordSong);
+        // TRANSFORMAR A HTML
+        scope.parsedChordproHtml.forEach(element => {
+          scope.chordproSongHtml += element
+        });
 
+        let my_element = document.getElementById('chordelement');
+        my_element.innerHTML = scope.chordproSongHtml;
+
+
+      }
+
+      scope.transpose = function () {
+
+        let transposer = new ChordProjectParser.Transposer();
+        
       }
 
       function setup() {

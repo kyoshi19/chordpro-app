@@ -1093,15 +1093,19 @@ td.work-item:hover {
   font-family: "Titillium";
   src: url("../../fonts/titillium-web/TitilliumWeb-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "consola";
+  src: url("../../fonts/inconsolata/Inconsolata-Regular.ttf") format("truetype");
+}
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Titillium";
+  font-family: "consola";
   font-weight: bold !important;
   color: #4e2604;
 }
 
 button, select, html, textarea, input {
-  font-family: "Titillium", "Helvetica Neue", sans-serif !important;
+  font-family: "consola", "Helvetica Neue", sans-serif !important;
 }
 
 button, select, textarea {
@@ -1114,7 +1118,7 @@ button, select, textarea {
 }
 
 .site-slogan {
-  font-family: "Titillium";
+  font-family: "consola";
   font-size: 14px;
 }
 .site-slogan a {
@@ -1122,7 +1126,7 @@ button, select, textarea {
 }
 
 .site-name {
-  font-family: "Titillium";
+  font-family: "consola";
   font-weight: normal;
   font-size: 24px;
   margin: 0;
@@ -1130,7 +1134,7 @@ button, select, textarea {
 }
 
 .site-title {
-  font-family: "Titillium";
+  font-family: "consola";
 }
 
 .message-result {

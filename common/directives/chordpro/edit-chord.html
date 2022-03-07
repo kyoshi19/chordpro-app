@@ -1,39 +1,29 @@
-<ng-form name="editSongForm"
-  ng-submit="">
+<ng-form name="editSongForm" ng-submit="">
 
   <div class="text-center">
     <h2>{{'global.song.edit'|translate}}</h2>
   </div>
 
-  <div layout="column"
-    flex="50">
+  <div layout="column" flex="50">
 
     <!-- TITULO -->
     <md-input-container>
       <label>{{'global.name' | translate}}</label>
-      <input name="title"
-        aa-label="{{'global.name' | translate}}"
-        aa-label-strategy="emptyStrategy"
-        aa-field-group="song.title"
-        autocomplete="off"
-        ng-required=true>
+      <input name="title" aa-label="{{'global.name' | translate}}" aa-label-strategy="emptyStrategy"
+        aa-field-group="song.title" autocomplete="off" ng-required=true>
     </md-input-container>
 
     <!-- ARTISTA -->
     <md-input-container>
       <label>{{'global.artist' | translate}}</label>
-      <input name="artist"
-        aa-label="{{'global.artist' | translate}}"
-        aa-label-strategy="emptyStrategy"
-        aa-field-group="song.artist"
-        autocomplete="off">
+      <input name="artist" aa-label="{{'global.artist' | translate}}" aa-label-strategy="emptyStrategy"
+        aa-field-group="song.artist" autocomplete="off">
     </md-input-container>
 
   </div>
 
 
-  <div layout="row"
-    flex="100">
+  <div layout="row" flex="100">
 
     <!-- CODIGO CHORPRO -->
     <div flex=50>
@@ -44,17 +34,12 @@
     </div>
 
     <!-- VISTA PREVIA -->
-    <div flex=50>
-      <div ng-repeat="line in parsedChordpro track by $index">
-        <div ng-if="$index > 1">
-          {{line}}
-        </div>
-      </div>
-      <md-input-container class="md-block">
-        <label>{{'global.preview' | translate}}</label>
-        <textarea ng-model="parsedChordpro" disabled=true></textarea>
-      </md-input-container>
-    </div>
-  </div>
+    <div flex="50">
+      <label>{{'global.preview' | translate}}</label>
+      <h4 id="chordelement">
 
+      </h4>
+    </div>
+
+  </div>
 </ng-form>
