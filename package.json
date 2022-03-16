@@ -15,6 +15,7 @@
     "angular-modal-service": "^0.15.6",
     "angular-sanitize": "^1.8.2",
     "chordproject-parser": "^0.2.14",
+    "chordsheetjs": "^6.1.0",
     "ngstorage": "^0.3.11"
   }
 }

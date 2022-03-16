@@ -2,7 +2,7 @@
   'use strict';
 
   //  edit chord directive
-  function editChord($log) {
+  function editChord($log, isEmpty, bgValue, filter) {
 
     var directive = {
       restrict: 'E',
@@ -21,9 +21,9 @@
       /* --> VALUES <-- */
 
       scope.notes = ChordProjectParser.MusicLetter;
+      var musicBaseNotes = bgValue('musicBaseNotes')
 
-      $log.info(scope.notes);
-
+      var chordsheet = ChordSheetJS;
 
       /* --> METHODS <-- */
 
@@ -40,23 +40,38 @@
 
       }
 
-      scope.transpose = function() {
+      scope.transpose = function(step) {
 
-        scope.chordSong = ChordProjectParser.Transposer.transpose(scope.chordSong, scope
-          .newKey.note);
+        if (isEmpty(scope.song.chordpro))
+          return;
 
-        scope.showChordProParsedSong(true);
+        let newNote = '';
+        let noteArray = scope.song.chordpro.matchAll(bgValue('patterns').notePattern);
 
-        let chordoproFormatter = new ChordProjectParser.ChordProFormatter();
-        let formatedChordproSong = chordoproFormatter.format(scope.chordSong);
+        for (const note of noteArray) {
+          console.log(note);
+          var baseNote = note[1][0];
 
-        scope.song.chordpro = '';
-        formatedChordproSong.forEach(element => {
-          scope.song.chordpro += element
-          if (formatedChordproSong.indexOf(element) != formatedChordproSong.length - 1) {
-            scope.song.chordpro += '\n';
+          var valueNote = filter('filter')(musicBaseNotes, baseNote)[0];
+         
+          var newIndex = musicBaseNotes.indexOf(valueNote);
+
+          newIndex = newIndex == (musicBaseNotes.length -1) ? 0 : newIndex + 1
+
+          newNote = musicBaseNotes[newIndex].name;
+
+          if (note[1][1] == 'b') {
+            
+          }else{
+
           }
-        });
+
+        }
+
+      }
+
+      function changeNote(note, step) {
+
       }
 
       function generateHtmlFormatedSong() {
@@ -73,10 +88,28 @@
 
       function getJsonSong() {
 
+        let chordProCode = "";
+
+        if (!isEmpty(scope.song.title)) {
+          chordProCode += "{title:" + scope.song.title + "}\n";
+        }
+
+        if (!isEmpty(scope.song.artist)) {
+          chordProCode += "{artist:" + scope.song.artist + "}\n";
+        }
+
+        if (!isEmpty(scope.song.key)) {
+          chordProCode += "{key:" + scope.song.key + "}\n";
+        }
+
+        chordProCode += scope.song.chordpro ? scope.song.chordpro : '';
+
         let chordProParser = new ChordProjectParser.ChordProParser();
-        return chordProParser.parse(scope.song.chordpro);
+        return chordProParser.parse(chordProCode);
 
       }
+
+
 
       function setup() {
 
@@ -95,7 +128,10 @@
   /* --> CONFIGURATION <-- */
 
   editChord.$inject = [
-    '$log'
+    '$log',
+    'isEmptyFilter',
+    'bgValueFilter',
+    '$filter'
   ];
 
   /* --> MODULE <-- */
